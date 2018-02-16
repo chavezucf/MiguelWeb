@@ -1,0 +1,25 @@
+<div style="height: 500px" *ngIf="developerJobs?.length < 1"> Loding content</div>
+<ul class="list-group" *ngIf="developerJobs?.length > 0">
+  <li class="list-group-item">
+    <!--<a [routerLink]="['/listing/'+listing.key]">{{listing.title}}</a>-->
+    <h1> Devloper Experience</h1>
+    <ul class="list-group">
+      <li class="list-group-item" *ngFor="let job of developerJobs; ">
+        <!--<a [routerLink]="['/listing/'+listing.key]">{{listing.title}}</a>-->
+        <h1> {{job.location}}</h1>
+      </li>
+    </ul>
+  </li>
+</ul>
+<ul class="list-group" *ngIf="otherJobs?.length > 0">
+  <li class="list-group-item">
+    <!--<a [routerLink]="['/listing/'+listing.key]">{{listing.title}}</a>-->
+    <h1> Other Experience</h1>
+    <ul class="list-group">
+      <li class="list-group-item" *ngFor="let job of otherJobs; ">
+        <!--<a [routerLink]="['/listing/'+listing.key]">{{listing.title}}</a>-->
+        <h1> {{job.location}}</h1>
+      </li>
+    </ul>
+  </li>
+</ul>
