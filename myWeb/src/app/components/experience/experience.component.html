@@ -1,25 +1,40 @@
+<div class= "banner-sektion banner-overlay ">
+  <div class="container text-center">
+    <div class="col-md-12">
+      <div class="banner-heading ">
+        <h2>Work Experience </h2>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container home-container">
 <div style="height: 500px" *ngIf="developerJobs?.length < 1"> Loding content</div>
-<ul class="list-group" *ngIf="developerJobs?.length > 0">
-  <li class="list-group-item">
-    <!--<a [routerLink]="['/listing/'+listing.key]">{{listing.title}}</a>-->
-    <h1> Devloper Experience</h1>
-    <ul class="list-group">
-      <li class="list-group-item" *ngFor="let job of developerJobs; ">
-        <!--<a [routerLink]="['/listing/'+listing.key]">{{listing.title}}</a>-->
-        <h1> {{job.location}}</h1>
-      </li>
-    </ul>
-  </li>
-</ul>
-<ul class="list-group" *ngIf="otherJobs?.length > 0">
-  <li class="list-group-item">
-    <!--<a [routerLink]="['/listing/'+listing.key]">{{listing.title}}</a>-->
-    <h1> Other Experience</h1>
-    <ul class="list-group">
-      <li class="list-group-item" *ngFor="let job of otherJobs; ">
-        <!--<a [routerLink]="['/listing/'+listing.key]">{{listing.title}}</a>-->
-        <h1> {{job.location}}</h1>
-      </li>
-    </ul>
-  </li>
-</ul>
+<div *ngIf="developerJobs?.length > 0">
+  <h2> <span class="glyphicon glyphicon-compressed"></span> Devloper Experience</h2>
+  <ul class="list-group">
+    <li class="list-group-item" *ngFor="let job of developerJobs; ">
+      <!--<a [routerLink]="['/listing/'+listing.key]">{{listing.title}}</a>-->
+      <h4> {{job.position}}</h4>
+      <h5> {{job.companyName}}</h5>
+      <h6> {{job.location}}</h6>
+      <h6> {{job.timeFrame}}</h6>
+      <ul *ngFor="let res of job.responsibilities;">
+        <li>{{res}}</li> 
+      </ul>
+    </li>
+  </ul>
+
+  <h2> <span class="glyphicon glyphicon-briefcase"></span> Other Experience </h2>
+  <ul class="list-group">
+    <li class="list-group-item" *ngFor="let job of otherJobs; ">
+      <!--<a [routerLink]="['/listing/'+listing.key]">{{listing.title}}</a>-->
+      <h4> {{job.position}}</h4>
+      <h5> {{job.companyName}}</h5>
+      <h6> {{job.location}}</h6>
+      <h6> {{job.timeFrame}}</h6>
+      <ul *ngFor="let res of job.responsibilities;">
+        <li>{{res}}</li> 
+      </ul>
+    </li>
+  </ul>
+</div>

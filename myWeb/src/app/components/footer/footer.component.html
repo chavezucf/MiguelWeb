@@ -1,32 +1,40 @@
 <footer>
   <div class="container">
     <div class="row">
-      <div class="col-sm-6"> 
-        <h2> Contact Me</h2>
-        <form action="">
-          <div class="form-group">
-            <label for="name">Name:</label>
-            <input type="text" class="form-control" id="name" placeholder="Enter name" name="name">
-          </div>
-          <div class="form-group">
-            <label for="name">Email:</label>
-            <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
-          </div>
-          <button type="submit" class="btn btn-primary pull-right">Submit</button>
-        </form>
+      <div class=" footer-form col-sm-6"> 
+          <h2> Contact Me</h2>
+          <form action="">
+            <div class="form-group">
+              <label for="name">Name:</label>
+              <input type="text" class="form-control" id="name" placeholder="Enter name" name="name">
+            </div>
+            <div class="form-group">
+              <label for="name">Email:</label>
+              <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea type="text" rows="3" style="resize:none;" class="form-control" id="email" placeholder="Enter message" name="message"></textarea>
+              </div>
+              <section class="download text-center">
+                  <a class="btn line-btn-dark btn-icon btn-radius" title="Submit" href="#">
+                    <i class="fa fa-download"></i> Submit</a>
+                </section>
+          </form>
       </div>
-      <div class="col-sm-6"> 
-        <h2> Website information</h2>
-        <p>s simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
-        <ul>
-          <li>Tools used:</li>
+      <div class="footer-information col-sm-6">
+          <h2> Website information</h2>
+          <p>This website was constructed as a SPA (Single Page Application) using Angular v5. It is currently being hosted on Google's Firebase Hosting servers. The choice to host it there was made because, some of the data that is being render on this page is dynamically being pulled from Firebase's Realtime Database. Below is a list of tools that are were used to create this web application. As well at the bottom there is an admin login page where I can logon and modify the dynamic content. </p>
           <ul>
-            <li>Angular v5</li>
-            <li>Code VS</li>
-            <li>Google Chrome</li>
-            <li>Google Firebase</li>
+            <li>Tools used:</li>
+            <ul>
+              <li>Angular v5</li>
+              <li>VS Code</li>
+              <li>Google Chrome Dev Tool</li>
+              <li>Google Firebase service</li>
+            </ul>
+            <li><a href="#">Admin Login</a></li>
           </ul>
-        </ul>
       </div>
     </div>
   </div>

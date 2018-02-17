@@ -1,0 +1,55 @@
+{
+  "experience" : {
+    "developer" : {
+      "-JKey1" : {
+        "companyName" : "The Walt Disney Company",
+        "location" : "Orlando, FL",
+        "position" : "Software Developer/QA Analyst",
+        "responsibilities" : [
+          "Developed a .NET web application used for auditing time and issuing attendance reprimands for 75,000 Cast Members.",
+          "Built a service layer to ensure all business applications had a single controlled connection to the database and its entities.",
+          "Lead a project with 5 team members to reconstruct MyDesk, a web application that distributes work load across the business.",
+          "Assigned daily work task to my reports; also provided mentoring, code reviews, and training to ensure program compliance."
+        ],
+        "timeFrame" : "Dec 2017 – Present"
+      },
+      "-JKey2" : {
+        "companyName" : "The Walt Disney Company",
+        "location" : "Orlando, FL",
+        "position" : "Compliance Specialist Intern",
+        "responsibilities" : [
+          "Rebuilt an error ticketing system for internal use. Developed a new UI to open new tickets internally and created new infrastructure to communicate between the internal ticking system and the enterprise ticking system, ServiceNow.",
+          "Expanded our own API, to be able to GET, POST, and DELETE to any other API dynamically through our SQL database.",
+          "Conducted weekly training to teach other Compliance Specialists and department Leaders about different web architectures and technologies (e.g. Entity Framework, WebAPI, KnockoutJS, JQuery, C#, JavaScript, Object Oriented Programming, and MVC).",
+          "Lead team meetings for different operational processes and implemented process improvements to better the operation.",
+          "Created reference guides on Confluence, a centralize repository, which provides technical documentation to the team."
+        ],
+        "timeFrame" : "June 2017 – Dec 2017"
+      }
+    },
+    "other" : {
+      "-JKey3" : {
+        "companyName" : "Sanibel Sunglass Co.",
+        "location" : "Greater Atlanta Area",
+        "position" : "Assistant Manager",
+        "responsibilities" : [
+          "Managed both store computers, making sure all documents and programs functioned correctly.",
+          "Sold the most every month, about 45% of all total company sales.",
+          "Trained new sales associates and managers companywide to be program compliant and provide 5 star customer service.",
+          "Increased the sales and made the store the most profitable one in the whole company with sales over 1 million dollars."
+        ],
+        "timeFrame" : "Nov 2011 – May 2014"
+      },
+      "-JKey4" : {
+        "companyName" : "Sol Fiesta Bar and Grill",
+        "location" : "Navarre, FL",
+        "position" : "Waiter Manager",
+        "responsibilities" : [
+          "Managed the waiters and assigned them daily tasks.",
+          "Helped managed some bookkeeping and finances, calculated profits and losses using Excel spreadsheet."
+        ],
+        "timeFrame" : "July 2008 – Nov 2011"
+      }
+    }
+  }
+}

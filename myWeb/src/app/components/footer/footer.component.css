@@ -2,6 +2,46 @@ footer {
     background: #333;
     color: #fff;
     margin-top: 3em;
-    padding-top: 3em;
-    padding-bottom: 3em;
 }
+
+.footer-form{
+    padding: 3em 5em;
+}
+
+.footer-information{
+    padding: 3em 5em;
+}
+
+.footer-information a {
+    color: #CCC;
+}
+
+@media (max-width:568px) {
+    .footer-form{
+        padding: 3em 1em;
+    }
+    
+    .footer-information{
+        padding: 3em 1em;
+    }
+}
+
+/* Button CSS */
+
+.line-btn-dark, .line-btn-light {
+    padding: 10px 30px;
+    color: #fff;
+    border: 1px solid #fff;
+}
+.line-btn-dark:hover, .line-btn-light:hover {
+    color: #222;
+    border-color: transparent;
+    background: #CCC;
+}
+.line-btn-dark {
+    color: #CCC;
+    border: 1px solid #CCC;
+    background: 0 0;
+}
+
+

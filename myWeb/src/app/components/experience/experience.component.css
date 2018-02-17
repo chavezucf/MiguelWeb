@@ -1,0 +1,49 @@
+
+/* Home CSS */
+.home-container{
+    max-width: 1000px;
+}
+
+/* Banner CSS */
+.banner-overlay {
+    background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url('../../../assets/images/banner.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    color: #fff;
+    padding-top: 100px;
+    padding-bottom:100px;
+    max-height: 300px;
+
+}
+.banner-heading {
+    background: rgba(230,230,230,.8);
+    padding-top: 1em;
+    padding-bottom:1em;
+    max-width: 500px;
+    margin: auto;
+    border-radius: 15px;
+
+}
+
+.banner-heading h2 {
+    color:#111;
+    font-size: 42px;
+    font-weight: 600;
+}
+.banner-heading p {
+    color:#111;
+    padding-bottom:20px;
+    font-size: 19px;
+    font-weight: 400;
+}
+
+/* about-me CSS */
+.about-me {
+    margin: 2em;
+    padding: 2em;
+    margin-bottom: 30px;
+    background:white;
+    border-radius: 25px;
+}
