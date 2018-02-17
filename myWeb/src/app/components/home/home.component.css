@@ -1,7 +1,12 @@
 
+/* Home CSS */
+.home-container{
+    max-width: 1000px;
+}
+
 /* Banner CSS */
 .banner-overlay {
-    background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url('banner.jpg');
+    background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url('../../../assets/images/banner.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -18,7 +23,7 @@
     padding-bottom:1em;
     max-width: 500px;
     margin: auto;
-    border-radius: 25px;
+    border-radius: 15px;
 
 }
 
@@ -34,40 +39,94 @@
     font-weight: 400;
 }
 
-.container{
-    max-width: 1000px;
+/* about-me CSS */
+.about-me {
+    margin: 2em;
+    padding: 2em;
+    margin-bottom: 30px;
+    background:white;
+    border-radius: 25px;
 }
 
+.about-me .subtitle {
+    margin: 0px;
+}
+
+.about-me .title {
+    margin: 0px;
+    margin-bottom: 1.3em;
+    font-weight: bold;
+}
 
 .about-info .media-left {
-    padding-right: 50px;
-}
-.about-thumb img {
-    float: left;
-    width: 10rem;
-    height: 10rem;
-    margin: 0;
-    border-radius: 50%}
-.info-list li {
-    margin-bottom: .6rem;
-    padding: 0 0 1.5rem;
-}
-.info-list li label {
-    font-size: 16px;
     display: block;
 }
 
-.m-top-50 {
-    margin-top: 50px!important;
+.about-thumb img {
+    float: left;
+    width: 15rem;
+    height: 15rem;
+    margin-right: 50px;
+    border-radius: 50%;
+    border-width: 0.3em;
+    border-color: #222;
+    border-style: solid;
 }
 
-.m-bot-100 {
-    margin-bottom: 100px!important;
+
+@media (max-width:479px) {
+    .about-info .media-left, .media-body {
+        display: inline-block;
+        width: 100%
+    }
+    .about-info .media-left {
+        padding-right: 0;
+    }
+    .about-info {
+        text-align: center;
+    }
+    .about-thumb img {
+        display: inherit;
+        float: none;
+        margin-right: 0px;
+        margin-bottom: 20px;
+        border-width: 0.3em;
+        border-color: #222;
+        border-style: solid;
+    }
 }
 
-.font-bold {
-    font-weight: 700;
+@media (max-width:568px) {
+    .content.promo-txt, .hero .hero-content {
+        padding-top: 70px;
+    }
+    .info-list li {
+        float: none!important;
+        width: auto!important;
+    }
+    .about-info .media-left, .media-body {
+        display: inline-block;
+        width: 100%}
+    .about-info .media-left {
+        padding-right: 0;
+    }
+    .about-info {
+        text-align: center;
+    }
+    .about-thumb img {
+        display: inherit;
+        float: none;
+        margin-right: 00px;
+        margin-bottom: 20px;
+        border-width: 0.3em;
+        border-color: #222;
+        border-style: solid;
+    }
+    .about-info.m-bot-100 {
+        margin-bottom: 50px!important;
+    }
 }
+
 
 .line-btn-dark, .line-btn-light {
     padding: 10px 30px;
@@ -77,12 +136,33 @@
 .line-btn-dark:hover, .line-btn-light:hover {
     color: #fff;
     border-color: transparent;
-    background: #82b440;
+    background: #222;
 }
 .line-btn-dark {
     color: #000;
     border: 1px solid #000;
     background: 0 0;
+}
+
+/* profile-skills CSS */
+.profile-skills {
+}
+
+.profile-skills h4 {
+    font-weight: 700;
+}
+
+.info-list li {
+    margin-bottom: .6rem;
+    padding: 0 0 1.5rem;
+}
+.info-list li label {
+    font-size: 16px;
+    display: block;
+}
+
+.info-list a {
+    color: #222;
 }
 
 .mild-progress-style {
@@ -110,6 +190,19 @@
     position: relative;
     top: -35px;
 }
+.mild-progress-style .progress-bar .skills-info .level-left-less{
+    position: relative;
+    right: -20px;
+}
+.mild-progress-style .progress-bar .skills-info .level-left{
+    position: relative;
+    right: -30px;
+}
+.mild-progress-style .progress-bar .skills-info .level-left-more{
+    position: relative;
+    right: -40px;
+}
+
 .mild-progress-style .progress-bar span {
     font-size: 9px;
     line-height: normal;
@@ -135,50 +228,8 @@
     overflow: visible;
 }
 
-.info-list li {
-    float: none!important;
-    width: auto!important;
-}
 
-
-@media (max-width:479px) {
-    .about-info .media-left, .media-body {
-    display: inline-block;
-    width: 100%}
-.about-info .media-left {
-    padding-right: 0;
-}
-.about-info {
-    text-align: center;
-}
-.about-thumb img {
-    display: inherit;
-    float: none;
-    margin-bottom: 20px;
-}
-}@media (max-width:568px) {
-    .content.promo-txt, .hero .hero-content {
-    padding-top: 70px;
-    }
-    .info-list li {
-        float: none!important;
-        width: auto!important;
-    }
-    .about-info .media-left, .media-body {
-        display: inline-block;
-        width: 100%}
-    .about-info .media-left {
-        padding-right: 0;
-    }
-    .about-info {
-        text-align: center;
-    }
-    .about-thumb img {
-        display: inherit;
-        float: none;
-        margin-bottom: 20px;
-    }
-    .about-info.m-bot-100 {
-        margin-bottom: 50px!important;
-    }
+/* download CSS */
+.download {
+    margin-top: 50px!important;
 }
