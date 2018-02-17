@@ -17,7 +17,6 @@ import { ExperienceComponent } from './components/experience/experience.componen
 import { ProjectsComponent } from './components/projects/projects.component';
 import { SkillsComponent } from './components/skills/skills.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { TestComponent } from './components/test/test.component';
 
 const appRoutes: Routes = [
   {path:'', component:HomeComponent},
@@ -34,8 +33,7 @@ const appRoutes: Routes = [
     ExperienceComponent,
     ProjectsComponent,
     SkillsComponent,
-    FooterComponent,
-    TestComponent
+    FooterComponent
   ],
   imports: [
     BrowserModule,
