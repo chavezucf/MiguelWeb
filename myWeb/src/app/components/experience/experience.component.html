@@ -12,7 +12,7 @@
 <div *ngIf="developerJobs?.length > 0">
   <h2> <span class="glyphicon glyphicon-compressed"></span> Devloper Experience</h2>
   <ul class="list-group">
-    <li class="list-group-item" *ngFor="let job of developerJobs; ">
+    <li class="list-group-item" *ngFor="let job of developerJobs">
       <!--<a [routerLink]="['/listing/'+listing.key]">{{listing.title}}</a>-->
       <h4> {{job.position}}</h4>
       <h5> {{job.companyName}}</h5>
@@ -26,7 +26,7 @@
 
   <h2> <span class="glyphicon glyphicon-briefcase"></span> Other Experience </h2>
   <ul class="list-group">
-    <li class="list-group-item" *ngFor="let job of otherJobs; ">
+    <li class="list-group-item" *ngFor="let job of otherJobs">
       <!--<a [routerLink]="['/listing/'+listing.key]">{{listing.title}}</a>-->
       <h4> {{job.position}}</h4>
       <h5> {{job.companyName}}</h5>

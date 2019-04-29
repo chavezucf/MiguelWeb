@@ -13,7 +13,7 @@ export class ExperienceService {
 
   constructor(private db: AngularFireDatabase) { }
 
-  getDeveloperJobs() {
+  /*getDeveloperJobs() {
     this.developerJobsRef = this.db.list('experience/developer');
     this.developerJobs = this.developerJobsRef.snapshotChanges().map(changes => {
       return changes.map(c => ({ key: c.payload.key, ...c.payload.val() }));
@@ -26,6 +26,6 @@ export class ExperienceService {
       return changes.map(c => ({ key: c.payload.key, ...c.payload.val() }));
     });
     return this.otherJobs;
-  }
+  }*/
 
 }

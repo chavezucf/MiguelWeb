@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ExperienceService } from '../../services/experience.service'
-import { element } from 'protractor';
+import { AngularFireDatabase } from '@angular/fire/database';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-experience',
@@ -8,13 +8,21 @@ import { element } from 'protractor';
   styleUrls: ['./experience.component.css']
 })
 export class ExperienceComponent implements OnInit {
-  developerJobs: [any];
-  otherJobs: [any];
+  developerJ: Observable<any[]>;
+  otherJ: Observable<any[]>;
 
-  constructor(private experienceService: ExperienceService) { }
+  developerJobs: any[];
+  otherJobs: any[];
+
+  constructor(db: AngularFireDatabase) { 
+    this.developerJ = db.list('experience/developer').valueChanges();
+    this.otherJ = db.list('experience/other').valueChanges();
+    this.developerJ.subscribe(res => this.developerJobs = res);
+    this.otherJ.subscribe(res => this.otherJobs = res);
+  }
 
   ngOnInit() {
-    this.experienceService.getDeveloperJobs().subscribe(developerJobs => {
+    /*this.experienceService.getDeveloperJobs().subscribe(developerJobs => {
       this.developerJobs = developerJobs;
       console.log(this.developerJobs.length)
     });
@@ -22,7 +30,7 @@ export class ExperienceComponent implements OnInit {
     this.experienceService.getOtherJobs().subscribe(otherJobs => {
       this.otherJobs = otherJobs;
       console.log(this.otherJobs.length)
-    });
+    });*/
   }
   
 
