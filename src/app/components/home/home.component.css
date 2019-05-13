@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface');
 
 /* Home CSS */
 .home-container{
@@ -72,6 +73,33 @@
     border-color: #222;
     border-style: solid;
 }
+   
+  .test ol {
+    list-style-type: none;
+    padding-inline-start: 0px;
+    margin: 20px;
+    margin-bottom: 0;
+  }
+   
+  .test ol li {
+    position: relative;
+    font: bold italic 45px/1.5 Helvetica, Verdana, sans-serif;
+  }
+   
+  .test li p {
+    font: 12px/1.5 Helvetica, sans-serif;
+    padding-left: 60px;
+  }
+  .test li p .author{
+    font: 12px/1.5 Helvetica, sans-serif;
+  }
+  .test li p .title{
+    font: bold italic 12px/1.5 Helvetica, sans-serif;
+  }
+   
+  .test .number {
+    position: absolute;
+  }
 
 
 @media (max-width:479px) {
