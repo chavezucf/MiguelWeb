@@ -5,6 +5,16 @@
     max-width: 1000px;
 }
 
+/* Section Wrapper CSS */
+.section-wrapper {
+    margin: 2em;
+    padding: 2em;
+    margin-bottom: 30px;
+    background:#F2F2F2;
+    border-radius: 25px;
+
+}
+
 /* Banner CSS */
 .banner-overlay {
     background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url('../../../assets/images/banner.jpg');
@@ -40,27 +50,19 @@
     font-weight: 400;
 }
 
-/* about-me CSS */
-.about-me {
-    margin: 2em;
-    padding: 2em;
-    margin-bottom: 30px;
-    background:white;
-    border-radius: 25px;
-}
-
+/* About Me CSS */
 .about-me .subtitle {
     margin: 0px;
 }
 
 .about-me .title {
     margin: 0px;
-    margin-bottom: 1.3em;
+    margin-bottom: 0.5em;
     font-weight: bold;
 }
 
 .about-info .media-left {
-    display: block;
+    display: inline;
 }
 
 .about-thumb img {
@@ -73,33 +75,77 @@
     border-color: #222;
     border-style: solid;
 }
-   
-  .test ol {
+
+
+/* Books CSS */
+.books ol {
     list-style-type: none;
     padding-inline-start: 0px;
     margin: 20px;
     margin-bottom: 0;
-  }
-   
-  .test ol li {
+}
+
+.books ol li {
     position: relative;
     font: bold italic 45px/1.5 Helvetica, Verdana, sans-serif;
-  }
-   
-  .test li p {
+}
+
+.books li p {
     font: 12px/1.5 Helvetica, sans-serif;
     padding-left: 60px;
-  }
-  .test li p .author{
+}
+
+.books li p .author{
     font: 12px/1.5 Helvetica, sans-serif;
-  }
-  .test li p .title{
+}
+.books li p .title{
     font: bold italic 12px/1.5 Helvetica, sans-serif;
-  }
-   
-  .test .number {
+    color: #222;
+}
+
+.books .number {
     position: absolute;
-  }
+}
+
+/* profile-skills CSS */
+.profile-skills h4 {
+    font-weight: 700;
+}
+
+.profile-skills .info-list li {
+    margin-bottom: .6rem;
+    padding: 0 0 1.5rem;
+}
+.profile-skills .info-list li label {
+    font-size: 16px;
+    display: block;
+}
+
+.profile-skills .info-list a {
+    color: #222;
+}
+
+
+/* download CSS */
+.download {
+    margin-top: 50px!important;
+}
+
+.download .line-btn-dark{
+    padding: 10px 30px;
+    color: #fff;
+    border: 1px solid #fff;
+}
+.download .line-btn-dark:hover {
+    color: #fff;
+    border-color: transparent;
+    background: #222;
+}
+.download .line-btn-dark {
+    color: #000;
+    border: 1px solid #000;
+    background: 0 0;
+}
 
 
 @media (max-width:479px) {
@@ -124,17 +170,18 @@
     }
 }
 
-@media (max-width:568px) {
+@media (max-width:668px) {
     .content.promo-txt, .hero .hero-content {
         padding-top: 70px;
     }
-    .info-list li {
+    .profile-skills .info-list li {
         float: none!important;
         width: auto!important;
     }
     .about-info .media-left, .media-body {
         display: inline-block;
-        width: 100%}
+        width: 100%;
+    }
     .about-info .media-left {
         padding-right: 0;
     }
@@ -153,111 +200,4 @@
     .about-info.m-bot-100 {
         margin-bottom: 50px!important;
     }
-}
-
-
-.line-btn-dark, .line-btn-light {
-    padding: 10px 30px;
-    color: #fff;
-    border: 1px solid #fff;
-}
-.line-btn-dark:hover, .line-btn-light:hover {
-    color: #fff;
-    border-color: transparent;
-    background: #222;
-}
-.line-btn-dark {
-    color: #000;
-    border: 1px solid #000;
-    background: 0 0;
-}
-
-/* profile-skills CSS */
-.profile-skills {
-}
-
-.profile-skills h4 {
-    font-weight: 700;
-}
-
-.info-list li {
-    margin-bottom: .6rem;
-    padding: 0 0 1.5rem;
-}
-.info-list li label {
-    font-size: 16px;
-    display: block;
-}
-
-.info-list a {
-    color: #222;
-}
-
-.mild-progress-style {
-    position: relative;
-    height: 8px;
-    margin-top: 60px;
-    border-radius: 0;
-    background: #e4e4e4;
-    box-shadow: none;
-}
-.mild-progress-style .progress-bar {
-    font-size: 11px;
-    line-height: 30px;
-    position: relative;
-    overflow: visible;
-    box-sizing: border-box;
-    text-align: left;
-    letter-spacing: 1px;
-    color: #222;
-    background-color: #222;
-    box-shadow: none;
-}
-.mild-progress-style .progress-bar .skills-info {
-    font-size: 13px;
-    position: relative;
-    top: -35px;
-}
-.mild-progress-style .progress-bar .skills-info .level-left-less{
-    position: relative;
-    right: -20px;
-}
-.mild-progress-style .progress-bar .skills-info .level-left{
-    position: relative;
-    right: -30px;
-}
-.mild-progress-style .progress-bar .skills-info .level-left-more{
-    position: relative;
-    right: -40px;
-}
-
-.mild-progress-style .progress-bar span {
-    font-size: 9px;
-    line-height: normal;
-    position: relative;
-    bottom: 0;
-    float: right;
-    padding: 5px;
-    color: #fff;
-    border-radius: 3px;
-    background: #333;
-}
-.mild-progress-style .progress-bar span:after {
-    position: absolute;
-    bottom: -5px;
-    left: 50%;
-    margin-left: -5px;
-    content: '';
-    border-top: 5px solid #333;
-    border-right: 5px solid transparent;
-    border-left: 5px solid transparent;
-}
-.mild-progress-style.progress {
-    overflow: visible;
-}
-
-
-/* download CSS */
-.download {
-    margin-top: 50px!important;
 }
