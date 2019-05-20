@@ -10,6 +10,7 @@ import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 
 import { ExperienceService } from './services/experience.service';
+import { BookService } from './services/book/book.service';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
@@ -44,8 +45,10 @@ const appRoutes: Routes = [
     AngularFirestoreModule 
   ],
   providers: [
-    ExperienceService
+    ExperienceService,
+    BookService
   ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
