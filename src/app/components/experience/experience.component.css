@@ -1,7 +1,8 @@
 
 /* Home CSS */
-.home-container{
+.experience-container{
     max-width: 1000px;
+    min-height: 500px 
 }
 
 /* Banner CSS */
@@ -37,13 +38,4 @@
     padding-bottom:20px;
     font-size: 19px;
     font-weight: 400;
-}
-
-/* about-me CSS */
-.about-me {
-    margin: 2em;
-    padding: 2em;
-    margin-bottom: 30px;
-    background:white;
-    border-radius: 25px;
 }
