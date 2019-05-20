@@ -14,15 +14,15 @@ export interface Book {
 
 @Injectable()
 export class BookService {
-  booksCollections: AngularFirestoreCollection<Book>;
+  bookCollections: AngularFirestoreCollection<Book>;
   books: Observable<Book[]>;
   constructor(private afs: AngularFirestore) { }
 
   getBooks(){
-    this.booksCollections = this.afs.collection('books', ref => {
+    this.bookCollections = this.afs.collection('books', ref => {
       return ref.orderBy('index')
     });
-    this.books = this.booksCollections.valueChanges();
+    this.books = this.bookCollections.valueChanges();
     return this.books
   }
 
