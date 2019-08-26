@@ -1,3 +1,9 @@
+# MiguelChavezWeb.com
+
+This is the source code for the web site MiguelChavezWeb.com
+
+© 2019 Copyright: MiguelChavezWeb.com
+
 # MyWeb
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.8.
