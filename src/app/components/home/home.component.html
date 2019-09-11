@@ -17,13 +17,13 @@
         <img alt="" class="" src="../../../assets/images/Me.jpg">
       </div>
       <div class="media-body">
-        <p>I am a Quality Assurance Analyst at The Walt Disney Company. I currently lead a team of 3 and we are
-          responsible for all the web applications inside the Labor and Time Team.
-        </p>
         <p>
-          I am also a multiplier, I try to bring out the smarts and capability of everyone around me. In my
+          I am a multiplier, I try to bring out the smarts and capability of everyone around me. In my
           leadership style I, find and value the genius of others, extend challenges, force debates over decisions
           and instill ownership and accountability.
+        </p>
+        <p>In my previous role I was a Software Engineer Manager at The Walt Disney Company. I led a team of 4 and we were
+          responsible for all the web applications inside the Labor Attendance and Time Team.
         </p>
       </div>
     </div>
@@ -65,7 +65,7 @@
           </li>
           <li>
             <label>Email:</label>
-            <a href="mailto:mac3@knights.ucf.edu">mac3@knights.ucf.edu</a>
+            <a href="mailto:Miguel@MiguelChavezWeb.com">Miguel@MiguelChavezWeb.com</a>
           </li>
 
         </ul>
@@ -80,41 +80,13 @@
       from these books. I have included the link, Audible title, author, and the summary found on Audible. Please
       listen and get to know how I think, live, and lead.
     </p>
-    <ol class="info-list list-unstyled">
-      <li><span class="number">1.</span>
-        <p><a class="title" target="_blank"
-            href="https://www.audible.com/pd/Multipliers-Revised-and-Updated-Audiobook/B06XY5L8GZ?qid=1557776621&sr=1-1&ref=a_search_c3_lProduct_1_1&pf_rd_p=e81b7c27-6880-467a-b5a7-13cef5d729fe&pf_rd_r=0TAB8XTC9X6PJP1VW130">
-            Multipliers, Revised and Updated </a> <span class="author">- Liz Wiseman -</span>
-          We've all had experiences with two dramatically different types of leaders. The first type drain
-          intelligence, energy, and capability from the people around them and always need to be the smartest
-          people in the room. These are the idea killers, the energy sappers, the diminishers of talent and
-          commitment. On the other side of the spectrum are leaders who use their intelligence to amplify the
-          smarts and capabilities of the people around them. When these leaders walk into a room, lightbulbs go
-          off over people's heads; ideas flow, and problems get solved. These are the leaders who inspire employees
-          to stretch themselves to deliver results that surpass expectations. These are the Multipliers.
-          And the world needs more of them - especially now, when leaders are expected to do more with less.</p>
-      </li>
-      <li><span class="number">2.</span>
-        <p><a class="title" target="_blank"
-            href="https://www.audible.com/pd/Rich-Dad-Poor-Dad-Audiobook/B008BT3C1Q?qid=1557775937&sr=1-1&ref=a_search_c3_lProduct_1_1&pf_rd_p=e81b7c27-6880-467a-b5a7-13cef5d729fe&pf_rd_r=BQHHAHT2CSM2GJCXHA82">
-            Rich Dad Poor Dad </a> <span class="author">- Robert T. Kiyosaki -</span>
-          Robert Kiyosaki has challenged and changed the way tens of millions of people around the world think
-          about money. With perspectives that often contradict conventional wisdom, Robert has earned a reputation
-          for straight talk, irreverence, and courage. He is regarded worldwide as a passionate advocate for
-          financial education.</p>
-      </li>
-      <li><span class="number">3.</span>
-        <p><a class="title" target="_blank"
-            href="https://www.audible.com/pd/The-Alchemist-Audiobook/B002V0Q4LG?qid=1557776502&sr=1-1&ref=a_search_c3_lProduct_1_1&pf_rd_p=e81b7c27-6880-467a-b5a7-13cef5d729fe&pf_rd_r=8K0FJSANEQFVP5RV791C">
-            The Alchemist </a> <span class="author">- Paulo Coelho -</span>
-          This story, dazzling in its simplicity and wisdom, is about an Andalusian shepherd boy named Santiago
-          who travels from his homeland in Spain to the Egyptian desert in search of treasure buried in the Pyramids.
-          Along the way he meets a Gypsy woman, a man who calls himself king, and an Alchemist, all of whom point
-          Santiago in the direction of his quest. No one knows what the treasure is, or if Santiago will be able
-          to surmount the obstacles along the way But what starts out as a journey to find worldly goods turns
-          into a meditation on the treasures found within. Lush, evocative, and deeply humane, the story of Santiago
-          is art eternal testament to the transforming power of our dreams and the importance of listening to
-          our hearts.</p>
+    <ol class="info-list list-unstyled" *ngFor="let book of books | async">
+      <li>
+          <span class="number"> {{ book.index }}.</span>
+          <p>
+            <a class="title" target="_blank" href="{{book.url}}"> {{ book.title}} </a>
+            <span class="author">- {{book.author}} -</span>
+          {{ book.summary }}</p>
       </li>
     </ol>
   </section>

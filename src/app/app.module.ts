@@ -7,8 +7,10 @@ import { RouterModule, Routes } from '@angular/router';
 import { environment } from '../environments/environment';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
 
-import { ExperienceService } from './services/experience.service';
+import { ExperienceService } from './services/experience/experience.service';
+import { BookService } from './services/book/book.service';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
@@ -17,6 +19,7 @@ import { ExperienceComponent } from './components/experience/experience.componen
 import { ProjectsComponent } from './components/projects/projects.component';
 import { SkillsComponent } from './components/skills/skills.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { LoadingSpinnerComponent } from './components/loading-spinner/loading-spinner.component';
 
 const appRoutes: Routes = [
   {path:'', component:HomeComponent},
@@ -33,17 +36,21 @@ const appRoutes: Routes = [
     ExperienceComponent,
     ProjectsComponent,
     SkillsComponent,
-    FooterComponent
+    FooterComponent,
+    LoadingSpinnerComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(appRoutes),
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    AngularFirestoreModule 
   ],
   providers: [
-    ExperienceService
+    ExperienceService,
+    BookService
   ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+

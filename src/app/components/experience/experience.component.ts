@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { AngularFireDatabase } from '@angular/fire/database';
+import { ExperienceService, Experience } from '../../services/experience/experience.service';
 import { Observable } from 'rxjs';
+import { filter } from 'rxjs/operators';
 
 @Component({
   selector: 'app-experience',
@@ -8,30 +9,17 @@ import { Observable } from 'rxjs';
   styleUrls: ['./experience.component.css']
 })
 export class ExperienceComponent implements OnInit {
-  developerJ: Observable<any[]>;
-  otherJ: Observable<any[]>;
+  leadershipExperiences: Observable<Experience[]>;
+  otherExperiences: Observable<Experience[]>;
 
-  developerJobs: any[];
-  otherJobs: any[];
+  showSpinner: boolean = true;
 
-  constructor(db: AngularFireDatabase) { 
-    this.developerJ = db.list('experience/developer').valueChanges();
-    this.otherJ = db.list('experience/other').valueChanges();
-    this.developerJ.subscribe(res => this.developerJobs = res);
-    this.otherJ.subscribe(res => this.otherJobs = res);
-  }
+  constructor(private experienceService: ExperienceService) {}
 
   ngOnInit() {
-    /*this.experienceService.getDeveloperJobs().subscribe(developerJobs => {
-      this.developerJobs = developerJobs;
-      console.log(this.developerJobs.length)
-    });
-
-    this.experienceService.getOtherJobs().subscribe(otherJobs => {
-      this.otherJobs = otherJobs;
-      console.log(this.otherJobs.length)
-    });*/
+    this.leadershipExperiences = this.experienceService.getLeadershipExperience();
+    this.otherExperiences = this.experienceService.getOtherExperience();
+    this.leadershipExperiences.subscribe(() => this.showSpinner = false)
   }
-  
 
 }
